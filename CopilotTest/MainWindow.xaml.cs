@@ -18,10 +18,6 @@ using System.Windows.Threading;
 using System.IO;
 using Microsoft.Win32;
 
-
-
-
-
 namespace CopilotTest
 {
     /// <summary>
@@ -133,12 +129,7 @@ namespace CopilotTest
 
             //passwordBox -> enable = false
             passwordBox.IsEnabled = false;
-            
-
-
-
         }
-
 
         // method to use sha-256 encryption to encrypt the input string(in passwordBox), return the 32bytes encrypted string.
         private byte[] Encrypt(string input)
@@ -195,7 +186,7 @@ namespace CopilotTest
             {
                 for (int j = 0; j < hash_tbl[i].Length; j++)
                 {
-                    if (j == (i + remainder+1024) % 32 || i==j)
+                    if (j == (i + remainder+16384) % 32 || i==j)
                         s += "  ";
                     else
                         s += hash_tbl[i][j].ToString("X2");
@@ -221,7 +212,7 @@ namespace CopilotTest
                 for (int j = 0; j < hash_tbl[i].Length; j++)
                 {
                     
-                    if (j != (i + remainder+1024) % 32 || i == j)
+                    if (j != (i + remainder + 16384) % 32 || i == j)
                         s2 += "  ";
                     else
                         s2 += hash_tbl[i][j].ToString("X2");
@@ -240,11 +231,8 @@ namespace CopilotTest
             TextBlock2x2.Text = s;
             TextBlock2x2Password.Text = s2;
             if (remainder < 0)
-                remainder += 1024;
+                remainder += 16384;
             TextBlock2x2Remainder.Text = (remainder%32).ToString("X2");
         }   
-
-
-
     }
 }
