@@ -17,13 +17,14 @@ using System.Threading;
 using System.Windows.Threading;
 using System.IO;
 using Microsoft.Win32;
+using MahApps.Metro.Controls;
 
 namespace SHA256
 {
     /// <summary>
     /// MainWindow.xaml 的互動邏輯
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public int remainder;
         public int originalRemainder;
