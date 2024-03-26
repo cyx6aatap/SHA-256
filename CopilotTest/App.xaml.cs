@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace CopilotTest
+namespace SHA256
 {
     /// <summary>
     /// App.xaml 的互動邏輯

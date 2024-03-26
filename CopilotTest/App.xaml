@@ -1,7 +1,7 @@
-﻿<Application x:Class="CopilotTest.App"
+﻿<Application x:Class="SHA256.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:CopilotTest"
+             xmlns:local="clr-namespace:SHA256"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

@@ -18,7 +18,7 @@ using System.Windows.Threading;
 using System.IO;
 using Microsoft.Win32;
 
-namespace CopilotTest
+namespace SHA256
 {
     /// <summary>
     /// MainWindow.xaml 的互動邏輯
