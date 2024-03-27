@@ -48,8 +48,8 @@
         </Style>
 
         <Style x:Key="RemainderTextBlock" TargetType="TextBlock">
-            <Setter Property="Background" Value="MintCream"/>
-            <Setter Property="Foreground" Value="#3F3C3C"/>
+            <Setter Property="Background" Value="#3F3C3C"/>
+            <Setter Property="Foreground" Value="MintCream"/>
             <Setter Property="FontSize" Value="23"/>
             <Setter Property="FontFamily" Value="Consolas"/>
         </Style>
@@ -84,33 +84,34 @@
                         </StackPanel>
                 </Button>
 
-
                 <Button     Grid.Row="0"
                             Grid.Column="1"
                             Content="Internet"
                             FontSize="23"
                             FontFamily="Consolas"
-                            Foreground="#3F3C3C"
-                            Background="MintCream"
+                            Foreground="MintCream"
+                            Background="#3F3C3C"
                             Click="Internet_Button_Click"/>
                 
                 <TextBlock    Grid.Row="1"
                             Grid.Column="0"
-                            Background="MintCream"
+                            Background="#3F3C3C"
                             FontFamily="Consolas"/>
-                
+
                 <PasswordBox Name="passwordBox"
                              Grid.Row="1"
                              Grid.Column="0"
-                             Background="MintCream"
-                             Foreground="Gray"
+                             Background="Gray"
+                             Foreground="#3F3C3C"
                              FontSize="20"
                              Height="40"
                              FontFamily="Consolas"/>
 
-                
-
-
+                <Button Grid.Row="1"
+                        Grid.Column="1"
+                        Content="SHA-256"
+                        Style="{StaticResource DarkGrayButton}"
+                        Click="Encrypt_Button_Click" />
 
                 <TextBlock Name="TextBlockChkSum"
                            Grid.Row="2"
@@ -125,12 +126,7 @@
                            Style="{StaticResource RemainderTextBlock}"/>
 
 
-                <Button Grid.Row="1"
-                        Grid.Column="1"
-                        Content="SHA-256"
-                        Style="{StaticResource DarkGrayButton}"
-                        Click="Encrypt_Button_Click" />
-
+                
                 <TextBlock Name="TextBlock2x2"
                            Grid.Row="0"
                            Grid.RowSpan="3"
